@@ -1,0 +1,29 @@
+<ion-view view-title="Greenbit">
+  <ion-content style="background: #e8ebf1;" class="padding">
+    <div class="list card">
+      <div class="item item-avatar">
+        <h2>Plant selfies</h2>
+        <p>
+          Collection of all plant selfies.
+        </p>
+      </div>
+      <div class="item item-body">
+          <button class="button icon-left button-calm ion-camera" ng-click="takePicture()"> Take picture</button>
+        <div class="row" ng-repeat="image in images" ng-if="$index % 4 === 0">
+            <div class="col col-25" ng-if="$index < images.length">
+                <img ng-src="data:image/jpeg;base64,{{images[$index].$value}}" width="100%" />
+            </div>
+            <div class="col col-25" ng-if="$index + 1 < images.length">
+                <img ng-src="data:image/jpeg;base64,{{images[$index + 1].$value}}" width="100%" />
+            </div>
+            <div class="col col-25" ng-if="$index + 2 < images.length">
+                <img ng-src="data:image/jpeg;base64,{{images[$index + 2].$value}}" width="100%" />
+            </div>
+            <div class="col col-25" ng-if="$index + 3 < images.length">
+                <img ng-src="data:image/jpeg;base64,{{images[$index + 3].$value}}" width="100%" />
+            </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

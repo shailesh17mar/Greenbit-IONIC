@@ -1,0 +1,47 @@
+<ion-view view-title="Greenbit">
+  <ion-content style="background: #e8ebf1;" class="padding">
+    <div class="list card">
+      <div class="item item-avatar">
+        <h2>Welcome</h2>
+        <p>
+          Now everyone can grow!
+        </p>
+      </div>
+      <div class="item item-body">
+        <div class="row">
+            <p>
+              We aim an innovative smart technology that eliminates the hassle from gardening as we know it and enables anybody to grow their own food and plants from their mobile and web interface remotely indoor making it simple, fun and interactive. It’ll water them, feed them and make sure they have optimal growing conditions 24/7. Just sit back, relax and watch your plants thrive, knowing that everything is being taken care of.
+            </p>
+        </div>
+        <div class="list card">
+          <div class="row">
+            <div class="col col-33">
+              <a href="#" class="item item-icon-left">
+                <i class="icon ion-ios-sunny"></i>
+                <span>{{reading.light}}</span>
+              </a>
+            </div>
+
+            <div class="col col-33">
+              <a href="#" class="item item-icon-left">
+                <i class="icon ion-waterdrop"></i>
+                <span>{{reading.temperature}} </span>
+              </a>
+            </div>
+
+            <div class="col col-33">
+              <a href="#" class="item item-icon-left">
+                <i class="icon ion-thermometer"></i>
+                <span>{{reading.moisture}}</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+          <button class="button button-block icon-left ion-social-twitter button-positive" ng-click="openModal($event)">Share on Twitter</button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

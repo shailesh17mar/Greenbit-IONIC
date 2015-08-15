@@ -1,0 +1,18 @@
+ <ion-modal-view class="tweet">
+    <ion-header-bar>
+      <h1 class="title">Tweet Status</h1>
+    </ion-header-bar>
+    <ion-content>
+   <div class="list">
+	  <div class="item">
+	    <label class="item item-textarea">
+	    	<textarea ng-model="tweetMessage" placeholder="Write here"></textarea>
+		</label>
+	    </div>
+	    <div class="item">
+	    <button class="button button-positive" ng-click="tweet();">
+	      Tweet it!
+	    </button>
+	  </div>
+	</div>
+  </ion-modal-view>

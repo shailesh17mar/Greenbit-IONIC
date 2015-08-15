@@ -1,0 +1,65 @@
+<ion-view view-title="Greenbit">
+  <ion-content style="background: #e8ebf1;" class="padding">
+    <div class="list card">
+      <div class="item item-avatar">
+        <h2>Change settings</h2>
+        <p>
+          Experiment with the plant.
+        </p>
+      </div>
+      <div class="item item-body">
+          <ion-item>
+            <div class="row">
+               <div class="button-bar ">
+                <a class="button button-assertive" ng-click="changePlant('tomato')">Tomato</a>
+                <a class="button button-royal" ng-click="changePlant('tulsi')">Tulsi</a>
+              </div>
+            </div>
+            <div class="row padding-25">
+               <div class="button-bar ">
+                <a class="button button-balanced" ng-click="changePlant('mint')">Mint</a>
+                <a class="button button-assertive" ng-click="changePlant('rose')">Rose</a>
+              </div>
+            </div>            
+          </ion-item>
+        <form>
+          <ion-item class="range range-assertive">
+            <i class="icon ion-ios-lightbulb-outline"></i>
+              <input type="range" ng-model="currentSettings.temperature" min="0" max="100">
+            {{currentSettings.temperature}}
+          </ion-item>
+          <ion-item class="range range-positive">
+            <i class="icon ion-ios-rainy-outline"></i>
+              <input type="range" ng-model="currentSettings.moisture" min="0" max="100">
+            {{currentSettings.moisture}}
+          </ion-item>
+          <ion-item class="range range-energized">
+              <i class="icon ion-ios-sunny-outline"></i>
+              <input type="range" ng-model="currentSettings.lightOn" min="0" max="12" step="1" >
+              {{currentSettings.lightOn}} hrs
+          </ion-item>
+          <ion-item class="range range-energized">
+              <i class="icon ion-ios-sunny"></i>
+              <input type="range" ng-model="currentSettings.lightOff" min="13" max="23" step="1" >
+              {{currentSettings.lightOff}} hrs
+          </ion-item>          
+          <ion-item class="item row">
+          <span class="col">
+            Toggle Light(On/Off)
+          </span>
+            <label class="toggle toggle-assertive col">
+             <input type="checkbox" ng-model="currentSettings.lightState">
+             <div class="track">
+               <div class="handle"></div>
+             </div>
+           </label>
+          </ion-item>
+          <div class="button-bar bar-dark">
+            <a class="button" ng-click="apply()">Apply</a>
+            <a class="button" ng-click="reset()">Reset</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
